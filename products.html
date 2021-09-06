@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+        <!-- dataset -->
+        <script src="rps_data.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark navbar-inverse navbar-expand-sm fixed-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="https://designfootball.com/images/joomgallery/originals/challenges_18/crest_redesign_competition_weekly_194/mumbai_city_fc_20210724_1586088927.jpg" height="30" ></a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link" href="./home.html"><span class="fa fa-home fa-lg"></span> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="./products.html"><span class="fa fa-list fa-lg"></span> Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+          </ul>
+          <a class="nav-link" href="./signup.php"><span class="fa fa-user-plus" style="color:white"> Signup</span></a>
+          <a class="nav-link" href="./login.php" ><span class="fa fa-sign-in" style="color:white"> Login</span></a>
+        </div>
+      </div>
+    </nav>
+
+        <div class="container mt-5 mb-5">
+                    <div class="d-flex justify-content-center row">
+                    <div class="col-md-10">
+                        <div class="row p-2 bg-white border rounded">
+                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://www.amstadion.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/p/r/prz_d_16.jpg"></div>
+                            <div class="col-md-6 mt-1">
+                                <h5>Official Jerrsey</h5>
+                                <div class="d-flex flex-row">
+                                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                                </div>
+                                <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+                                <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            </div>
+                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                <div class="d-flex flex-row align-items-center">
+                                    <h4 class="mr-1">$99.99</h4><span class="strike-text">$149.99</span>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            </div>
+                        </div>
+                        <div class="row p-2 bg-white border rounded mt-2">
+                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://thefootballcentral.co/wp-content/uploads/2020/09/PSG-Away-Jersey-Front-500x500.png"></div>
+                            <div class="col-md-6 mt-1">
+                                <h5>Away Kit</h5>
+                                <div class="d-flex flex-row">
+                                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+                                </div>
+                                <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+                                <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            </div>
+                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                <div class="d-flex flex-row align-items-center">
+                                    <h4 class="mr-1">$69.99</h4><span class="strike-text">$80.99</span>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            </div>
+                        </div>
+                        <div class="row p-2 bg-white border rounded mt-2">
+                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://static.nike.com/a/images/t_prod_ss/w_960,c_limit,f_auto/e587715a-f87d-4f63-a60f-b91626bc2bf8/air-jordan-1-zoom-paris-saint-germain-release-date-.jpg"></div>
+                            <div class="col-md-6 mt-1">
+                                <h5>Jordan x Mumbai FC</h5>
+                                <div class="d-flex flex-row">
+                                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>123</span>
+                                </div>
+                                <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+                                <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            </div>
+                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                <div class="d-flex flex-row align-items-center">
+                                    <h4 class="mr-1">$299.99</h4><span class="strike-text">$399.99</span>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            </div>
+                        </div>
+                        <div class="row p-2 bg-white border rounded mt-2">
+                            <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://www.amstadion.com/media/catalog/product/cache/2/image/9df78eab33525d08d6e5fb8d27136e95/b/c/bc-g529.jpg"></div>
+                            <div class="col-md-6 mt-1">
+                                <h5>Water Bottle</h5>
+                                <div class="d-flex flex-row">
+                                    <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>110</span>
+                                </div>
+                                <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+                                <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+                                <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.<br><br></p>
+                            </div>
+                            <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                                <div class="d-flex flex-row align-items-center">
+                                    <h4 class="mr-1">$15.99</h4><span class="strike-text">$21.99</span>
+                                </div>
+                                <h6 class="text-success">Free shipping</h6>
+                                <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+
+      <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-5 offset-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <a href="./home.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="./products.html">Shop</a></li>
+                        <li><a href="contactus.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+		              999, Mumbai Fc HeadQuarters<br>
+		              Juhu Beach<br>
+		              MUMBAI<br>
+		              <i class="fa fa-phone fa-lg"></i>: +91 838 104 2664<br>
+		              <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:lazeez@food.net">mumbaifc@football.net</a>
+		           </address>
+                </div>
+                <div class="col col-sm-4 align-self-center">
+                    <div style="text-align:center">
+                        <a class= "btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class= "btn btn-social-icon btn-facebook" href="http://www.facebook.com"><i class="fa fa-facebook"></i></a>
+                        <a class= "btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class= "btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class= "btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class= "btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+           </div>
+           <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p>© Copyright 1920 Mumbai FC</p>
+                </div>
+           </div>
+        </div>
+    </footer>
+    
+    
+    </body>
+    
+
+</html>
